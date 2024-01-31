@@ -1,3 +1,1 @@
-# tsParticles React Demo
-
-tsParticles React Demo used in Video tutorial
+http://atajne.me/school/engl101/projects/final
