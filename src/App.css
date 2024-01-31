@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -7,14 +8,7 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  /*background-color: #282c34;*/ /* this hides particles with z-index < 0 */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +22,118 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.question-mark {
+  font-size: 2.6em;
+  animation: fade 4s linear;
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.centered-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.phrase-box {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0s;
+  position: absolute;
+  text-decoration: none;
+  color: inherit;
+}
+
+.phrase-box:hover {
+  opacity: 1;
+}
+
+.emphasis {
+  animation: emphasis 1s infinite;
+}
+
+@keyframes emphasis {
+  0% { color: white; }
+  50% { color: red; }
+  100% { color: white; }
+}
+
+.fade {
+  animation: fade 2s infinite;
+}
+
+.question-marky {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 4px;
+  animation: flash 2s infinite;
+  color: white;
+  font-size: 2.6em;
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes flash {
+  0% {border-color: white;}
+  50% {border-color: transparent;}
+  100% {border-color: white;}
+}
+
+.fade-in {
+  animation: fade-in 1s forwards;
+  color: green;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.green-flash {
+  animation: emphasisy 1s linear infinite;
+}
+
+@keyframes emphasisy {
+  0% { color: white; }
+  50% { color: green; }
+  100% { color: white; }
+}
+
+.centered-contenty {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.blue-flash {
+  animation: emphasisz 1s linear infinite;
+}
+
+@keyframes emphasisz {
+  0% { color: white; }
+  50% { color: lightskyblue; }
+  100% { color: white; }
+}
+
+.green-red {
+  animation: emphasisa 1s linear infinite;
+}
+
+@keyframes emphasisa {
+  0% { color: green; }
+  50% { color: red; }
+  100% { color: green; }
 }
